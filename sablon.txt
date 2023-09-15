@@ -1,0 +1,2 @@
+<a href="allomasok/.html" target="lejatszo">
+    <img src="allomasok/.png" alt="" title=""><br></a>
