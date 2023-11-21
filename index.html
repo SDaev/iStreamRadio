@@ -2,40 +2,136 @@
 
     <head>
 
-        <meta charset="utf-8"> 
-        <title>v7.2 - iStreamRadio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>v8 - iStreamRadio</title>
         <link rel="icon" href="radio.ico">
 
         <style>
 
+            @font-face {
+                font-family: 'cimsor';
+                src: url('ethnocentric-regular.otf');
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'cimsorItalic';
+                src: url('ethnocentric-regular-italic.otf');
+                font-style: italic;
+            }
+
             body{
                 font-family: monospace;
-                background: darkolivegreen;
+                background: black;
+                color: white;
             }
 
-            iframe{
+            #navbar{
                 position: fixed;
                 left: 0;
-                right: 0;
-                width: 100%;
+                top: 0;
+                height: 80px;
+                width:100%;
+                background: linear-gradient(darkslategray 40px, gray);
             }
 
-            #cimsor{
-                position: fixed;
-                top: 0px;
+            #cim{
+                position: absolute;
+                top: 0;
                 height: 40px;
+                width: 100%;
+                margin: 0;
+                margin-top: 5px;
+                text-align: center;
+                font-size: x-large;
+                font-family: 'cimsor';
+                color: white;
+            }
+
+            #radio{
+                position: absolute;
+                left: 0;
+                height: 32px;
+                margin: 4px;
+                float: left;
+            }
+
+            #utinform{
+                position: absolute;
+                right: 0;
+                height: 32px;
+                margin: 4px;
+                float: right;
+            }
+
+            #menu{
+                position: absolute;
+                top: 40px;
+                padding: 12px;
+                margin: 0;
+                color: white;
+                font-size: 14px;
+                text-decoration: none;
+                font-family: sans-serif;
+            }
+
+            #menu:link{
+                background: linear-gradient(transparent, lightslategray);
+            }
+
+            #menu:visited{
+                background: linear-gradient(transparent, lightslategray);
+            }
+
+            #menu:hover{
+                background: linear-gradient(transparent, gray);
+            }
+
+            #menu:active{
+                background: linear-gradient(transparent, black);
+                font-style: oblique;
+                width: 115px;
             }
 
             #lista{
-                position: absolute;
-                top: 11%;
-                height: 74%;
+                margin-top: 80px;
+                margin-bottom: 50px;
+                font-family: monospace;
+                font-size: larger;
             }
 
             #lejatszo{
-                position: fixed;
-                bottom: 0px;
                 height: 55px;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background: gray;
+                text-align: left;
+            }
+
+            #face{
+                height: 55px;
+                float: left;
+                font-size: 32px;
+            }
+
+            @keyframes tucsok {
+                0%{
+                    color: auto;
+                }
+
+                100%{
+                    color: transparent
+                }
+            }
+
+            #tucsok{
+                animation: tucsok 1s infinite linear alternate;
+                height: 55px;
+                float: right;
+                font-size: 16px;
             }
 
         </style>
@@ -44,11 +140,164 @@
 
     <body>
 
-            <iframe src="title.html" frameborder="0" name="cimsor" scrolling="no" id="cimsor"></iframe>
-<br>
-            <iframe src="lista.html" frameborder="0" name="menu" scrolling="yes" id="lista"></iframe>
-<br>
-            <iframe src="allomasok/semmi.html" frameborder="0" name="lejatszo" scrolling="no" id="lejatszo"></iframe>
+        <div id="navbar">
+            <img src="radio.png" alt="ikon" title="ikon" id="radio"/>
+            <img src="utinform.png" alt="utinform" title="utinform" id="utinform"/>
+            <p id="cim">iStreamRadio</p>
+            <p><a href="about.html" target="_self" id="menu">TUDNIVALÓK</a></p>
+
+        </div>
+
+        <div id="lista">
+
+            <div id="kereskedelmi">
+
+            <p>
+                Kereskedelmi
+            </p>
+
+                <a href="allomasok/best_fm.html">
+                    <img src="allomasok/best_fm.png" alt="Best FM" title="Best FM"><br>BEST FM</a>
+
+                <a href="allomasok/mega.html">
+                    <img src="allomasok/mega.png" alt="Mega" title="Mega"><br>MEGA</a>
+
+                <a href="allomasok/petofi.html">
+                    <img src="allomasok/petofi.png" alt="Petőfi" title="Petőfi"><br>PETŐFI</a>
+
+                <a href="allomasok/radio_1.html">
+                    <img src="allomasok/radio_1.png" alt="Rádió 1" title="Rádió 1"><br>RÁDIÓ 1</a>
+
+                <a href="allomasok/radio_7.html">
+                    <img src="allomasok/radio_7.png" alt="Rádió 7" title="Rádió 7"><br>RÁDIÓ 7</a>
+
+                <a href="allomasok/radio_88.html">
+                    <img src="allomasok/radio_88.png" alt="Rádió 88" title="Rádió 88"><br>RÁDIÓ 88</a>
+
+                <a href="allomasok/radio_m.html">
+                    <img src="allomasok/radio_m.png" alt="Rádió M" title="Rádió M"><br>RÁDIÓ M</a>
+
+                <a href="allomasok/retro.html">
+                    <img src="allomasok/retro.png" alt="Retro" title="Retro"><br>RETRO</a>
+
+            </div>
+
+            <div id="jozene">
+
+                <p>
+                    Jó zenék kis megszakítással
+                </p>
+
+                <a href="allomasok/cool_fm.html">
+                    <img src="allomasok/cool_fm.png" alt="Cool FM" title="Cool FM"><br>COOL FM</a>
+
+                <a href="allomasok/cool_fm-xbeat.html">
+                    <img src="allomasok/cool_fm.png" alt="Cool FM" title="Cool FM"><br>COOL FM<br>Xbeat</a>
+
+                <a href="allomasok/dance_wave-all_dance_from_2000.html">
+                    <img src="allomasok/dance_wave.png" alt="Dance Wave!" title="Dance Wave!"><br>DANCE WAVE!</a>
+
+                <a href="allomasok/dance_wave-all_about_dance_before_2000.html">
+                    <img src="allomasok/dance_wave.png" alt="Dance Wave!" title="Dance Wave!"><br>DANCE WAVE<br>Retro!</a>
+
+                <a href="allomasok/danubius.html">
+                    <img src="allomasok/danubius.png" alt="Danubius" title="Danubius"><br>DANUBIUS</a>
+
+                <a href="allomasok/dj_now.html">
+                    <img src="allomasok/radio_now.png" alt="Radio Now" title="Radio Now"><br>DJ NOW!</a>            
+
+                <a href="allomasok/fresh_fm.html">
+                    <img src="allomasok/fresh_fm.png" alt="Fresh FM" title="Fresh FM"><br>FRESH FM</a>
+
+                <a href="allomasok/laza.html">
+                    <img src="allomasok/laza.png" alt="Laza" title="Laza"><br>LAZA</a>
+
+                <a href="allomasok/megadance.html">
+                    <img src="allomasok/megadance.png" alt="MegaDance" title="MegaDance"><br>MEGADANCE</a>
+
+                <a href="allomasok/oxygen_music.html">
+                    <img src="allomasok/ozone.png" alt="Oxygen Music" title="Oxygen Music"><br>OXYGEN MUSIC</a>
+
+                <a href="allomasok/ozone_fm.html">
+                    <img src="allomasok/ozone.png"alt="Oxygen Music" title="Oxygen Music"><br>OZONE FM</a>
+
+                <a href="allomasok/party_now.html">
+                    <img src="allomasok/radio_now.png" alt="Radio Now" title="Radio Now"><br>PARTY NOW!</a>
+
+                <a href="allomasok/poptarisznya.html">
+                    <img src="allomasok/poptarisznya.png" alt="Poptarisznya" title="Poptarisznya"><br>POPTARISZNYA</a>
+
+                <a href="allomasok/radio_47.html">
+                    <img src="allomasok/radio_47.png" alt="Rádió 47" title="Rádió 47"><br>RÁDIÓ 47</a>
+
+                <a href="allomasok/radio_88-energy.html">
+                    <img src="allomasok/radio_88.png" alt="Rádió 88" title="Rádió 88"><br>RÁDIÓ 88<br>Energy</a>
+
+                <a href="allomasok/radio_now.html">
+                    <img src="allomasok/radio_now.png" alt="Radio Now" title="Radio Now"><br>RADIO NOW!</a>
+
+                <a href="allomasok/radio_x.html">
+                    <img src="allomasok/radio_x.png" alt="Rádió X" title="Rádió X"><br>RÁDIÓ X</a>
+
+                <a href="allomasok/rise_fm-classic_house.html">
+                    <img src="allomasok/rise_fm.png" alt="Rise FM" title="Rise FM"><br>RISE FM<br>Classic House</a>
+
+                <a href="allomasok/rise_fm-deep_house.html">
+                    <img src="allomasok/rise_fm.png" alt="Rise FM" title="Rise FM"><br>RISE FM<br>Deep House</a>
+
+                <a href="allomasok/rise_fm-hit_house.html">
+                    <img src="allomasok/rise_fm.png" alt="Rise FM" title="Rise FM"><br>RISE FM<br>Hit House</a>
+
+                <a href="allomasok/roxy.html">
+                    <img src="allomasok/roxy.png" alt="Roxy" title="Roxy"><br>ROXY</a>
+
+                <a href="allomasok/superdj.html">
+                    <img src="allomasok/superdj.png" alt="SuperDJ" title="SuperDJ"><br>SUPERDJ</a>
+
+            </div>
+
+            <div id="rap">
+
+                <p>
+                    Hip-Hop & R'n'B
+                </p>
+
+                    <a href="allomasok/base_fm.html">
+                        <img src="allomasok/base_fm.png" alt="Base FM" title="Base FM"><br>BASE FM</a>
+
+                    <a href="allomasok/cool_fm-rapandhiphop.html">
+                        <img src="allomasok/cool_fm.png" alt="Cool FM" title="Cool FM"><br>COOL FM<br>Rap & Hip-Hop</a>
+
+                    <a href="allomasok/hot108jamz.html">
+                        <img src="allomasok/hot108jamz.png" alt="Hot108Jamz" title="Hot108Jamz"><br>HOT108JAMZ</a>   
+
+                    <a href="allomasok/oxygen_black_music.html">
+                        <img src="allomasok/ozone.png" alt="Oxygen Music" title="Oxygen Music"><br>OXYGEN<br>Black Music</a>
+
+                    <a href="allomasok/rise_fm-rnb.html">
+                        <img src="allomasok/rise_fm.png" alt="Rise FM" title="Rise FM"><br>RISE FM<br>R'n'B</a>
+
+                    <a href="allomasok/shakenow.html">
+                        <img src="allomasok/radio_now.png" alt="Radio Now" title="Radio Now"><br>SHAKE NOW!</a>
+
+            </div>
+
+        </div>
+
+        <div id="lejatszo">
+            
+            <div id="tucsok">
+                <span>
+                    Itt még a tücskök sem ciripelnek...<br>
+                    Bökj meg egy rádiót a lejátszáshoz!
+                </span>
+            </div>
+
+            <div id="face">
+                ¯\_(ツ)_/¯
+            </div>
+
+        </div>
 
     </body>
 
