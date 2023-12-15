@@ -3,55 +3,58 @@
 <head>
     <meta charset="utf-8">
     <title>Néma csend...</title>
-    
-    <style>
 
-        body{
-            background: grey;
-            font-family: monospace;
-            animation-iteration-count: 1;
+    <style>
+        body {
+            height: 50px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: gray;
         }
 
-        #face{
-            float: inline-start;
+        #face {
+            padding: 0;
+            margin: 0;
+            margin-top: 12px;
+            height: 55px;
+            float: left;
             font-size: 32px;
         }
 
-        #tucsok{
-            float: inline-end;
+        @keyframes tucsok {
+            0% {
+                color: auto;
+            }
+
+            100% {
+                color: transparent
+            }
+        }
+
+        #tucsok {
+            padding: 0;
+            margin: 0;
+            margin-top: 12px;
+            animation: tucsok 1s infinite linear alternate;
+            float: right;
             font-size: 16px;
         }
-
-        @media screen and (max-width: 500px){
-            #face{
-                visibility: hidden;
-            }
-            #tucsok{
-                width: 100%;
-                float: none;
-                text-align: center;
-            }
-        }
-
-        @media screen and (max-width: 325px){
-            #tucsok{
-                font-size: 12px;
-            }
-        }
-
     </style>
 
 </head>
 
-    <body>
+<body>
 
-        <div id="tucsok">
-            Itt még a tücskök sem ciripelnek...<br>
-            Bökj meg egy rádiót a lejátszáshoz!
-        </div>
+    <div id="tucsok">
+        Itt még a tücskök sem ciripelnek...<br>
+        Bökj meg egy rádiót a lejátszáshoz!
+    </div>
 
-        <div id="face">
-            ¯\_(ツ)_/¯
-        </div>
+    <div id="face">
+        ¯\_(ツ)_/¯
+    </div>
 
-    </body>
+</body>
+</html>
